@@ -24,4 +24,15 @@ class MainController extends Controller
         return view('pages.product.home', compact('products'));
     }
 
+    public function create_new()
+    {
+
+        $typologies = Typology::all();
+        $categories = Category::all();
+
+        return view('pages.products.create-new',
+            compact('categories', 'typologies')
+        );
+    }
+
 }

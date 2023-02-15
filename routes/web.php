@@ -19,6 +19,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [MainController::class, 'home'])
     ->name('home');
 
+Route::get('/product/create', [MainController::class, 'create_new'])
+    ->name('product.create_new');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
