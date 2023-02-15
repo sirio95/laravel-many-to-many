@@ -20,6 +20,7 @@ class ProductSeeder extends Seeder
     {
         Product::factory()->count(100)->make()->each(function ($p) {
 
+
             $typology = Typology::inRandomOrder()->first();
             $p->typology()->associate($typology);
 

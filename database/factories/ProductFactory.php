@@ -12,7 +12,7 @@ class ProductFactory extends Factory
     {
         return [
             'code' => fake()->regexify('[A-Z0-9]{10}'),
-            'name' => fake()->words(rand(1, 4), true),
+            'name' => fake()->words(rand(1, 3), true),
             'description' => fake()->text(rand(50, 150)),
             'price' => fake()->randomNumber(5, false),
             'weight' => fake()->randomNumber(5, false),
