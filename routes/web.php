@@ -22,6 +22,14 @@ Route::get('/', [MainController::class, 'home'])
 Route::get('/product/create', [MainController::class, 'create_new'])
     ->name('product.create_new');
 
+Route::get('/product/edit/{product}', [MainController::class, 'product_edit'])
+    ->name('product.edit');
+Route::post('/product/edit/{product}', [MainController::class, 'product_update'])
+    ->name('product.update');
+
+Route::get('/product/delete/{product}', [MainController::class, 'product_delete'])
+    ->name('product.delete');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
