@@ -22,6 +22,9 @@ Route::get('/', [MainController::class, 'home'])
 Route::get('/product/create', [MainController::class, 'create_new'])
     ->name('product.create_new');
 
+Route::post('/product/create', [MainController::class, 'productStore'])
+    ->name('product.store');
+
 Route::get('/product/edit/{product}', [MainController::class, 'product_edit'])
     ->name('product.edit');
 Route::post('/product/edit/{product}', [MainController::class, 'product_update'])

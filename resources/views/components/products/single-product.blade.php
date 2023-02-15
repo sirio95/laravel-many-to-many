@@ -7,6 +7,6 @@
         <li>Weight: {{ floatval($product-> weight / 100) }}kg</li>
         <li>Price: {{ floatval($product-> price / 100) }}&euro;</li>
         <li>Disponibilit&agrave; in copia fisica: {{ $product-> typology-> digital ? "YES" : "NO" }}</li>
-        <li><a href="{{route('product.edit')}}">Edit Product</a><a href="{{route('product.delete')}}">Delete Product</a></li>
+        <li><a href="{{route('product.edit', $product)}}">Edit Product</a><a href="{{route('product.delete', $product)}}">Delete Product</a></li>
     </ul>
 </li>

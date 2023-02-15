@@ -13,7 +13,9 @@
     <input type="text" name="description">
 
     <label for="price">Price</label>
+    <input type="number" name="price">
     <label for="weight">Weight</label>
+    <input type="number" name="weight">
 
     <label for="typology">Typology</label>
     <select name="typology_id">
